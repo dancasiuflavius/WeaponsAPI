@@ -1,0 +1,10 @@
+﻿insert into weapons (id, name, category, price) values (1, 'Plasma Rifle', 'spear', 387.78);
+insert into weapons (id, name, category, price) values (2, 'Energy Sword', 'axe', 596.04);
+insert into weapons(id, name, category, price) values (3, 'Pulse Rifle', 'spear', 145.81);
+insert into weapons (id, name, category, price) values (4, 'Railgun', 'axe', 621.83);
+insert into weapons (id, name, category, price) values (5, 'Buster Sword', 'spear', 48.49);
+insert into weapons (id, name, category, price) values (6, 'Plasma Rifle', 'sword', 779.72);
+insert into weapons (id, name, category, price) values (7, 'Gravity Hammer', 'sword', 774.92);
+insert into weapons (id, name, category, price) values (8, 'Mjolnir', 'sword', 692.83);
+insert into weapons (id, name, category, price) values (9, 'Buster Sword', 'sword', 715.48);
+insert into weapons (id, name, category, price) values (10, 'Lightsaber', 'spear', 751.73);

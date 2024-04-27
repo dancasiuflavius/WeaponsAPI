@@ -12,6 +12,7 @@ namespace WeaponsAPI.Weapons.Repository.Interfaces
         Task<Weapon> GetByIdAsync(int id);
         Task<Weapon> CreateAsync(CreateWeaponRequest weaponRequest);
         Task<Weapon> UpdateAsync(int id, UpdateWeaponRequest weaponRequest);
+        Task<Weapon> UpdateAsync(UpdateWeaponRequest productRequest);
         Task<Weapon> DeleteAsync(int id);
     }
 }

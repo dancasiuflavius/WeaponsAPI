@@ -10,6 +10,7 @@ public interface IWeaponCommandService
     Task<Weapon> CreateWeapon(CreateWeaponRequest weaponRequest);
 
     Task<Weapon> UpdateWeapon(int id, UpdateWeaponRequest weaponRequest);
+    Task<Weapon> UpdateWeapon(UpdateWeaponRequest weaponRequest);
 
     Task<Weapon> DeleteWeapon(int id);
 }

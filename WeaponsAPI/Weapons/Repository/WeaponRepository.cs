@@ -61,6 +61,18 @@ namespace WeaponsAPI.Weapons.Repository
 
             return weapon;
         }
+        public async Task<Weapon> UpdateAsync(UpdateWeaponRequest productRequest)
+        {
+            var product = (await _context.Weapons.FindAsync(productRequest.Id))!;
+
+            product.price = productRequest.Price ?? product.price;
+            product.Name = productRequest.Name ?? product.Name;
+            product.Category = productRequest.Category ?? product.Category;
+           
+            _context.Weapons.Update(product);
+            await _context.SaveChangesAsync();
+            return product;
+        }
         public async Task<Weapon> DeleteAsync(int id)
         {
             var weapon = await _context.Weapons.FindAsync(id);

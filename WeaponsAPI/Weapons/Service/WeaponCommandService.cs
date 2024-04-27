@@ -49,6 +49,21 @@ namespace WeaponsAPI.Weapons.Service
             product = await _repository.UpdateAsync(id,productRequest);
             return product;
         }
+        public async Task<Weapon> UpdateWeapon(UpdateWeaponRequest productRequest)
+        {
+            if (productRequest.Price < 0)
+            {
+                throw new InvalidPrice(Constants.INVALID_PRICE);
+            }
+
+            Weapon product = await _repository.GetByIdAsync(productRequest.Id);
+            if (product == null)
+            {
+                throw new ItemDoesNotExist(Constants.PRODUCT_DOES_NOT_EXIST);
+            }
+            product = await _repository.UpdateAsync(productRequest);
+            return product;
+        }
         public async Task<Weapon> DeleteWeapon(int id)
         {
             Weapon product = await _repository.GetByIdAsync(id);
